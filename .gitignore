@@ -1,0 +1,29 @@
+# Files with private data - DO NOT COMMIT
+config.yaml
+user_settings.json
+.env
+*.local
+
+# Test files (may contain API keys)
+test_*.py
+push_git.py
+git_push_log.txt
+
+# Logs
+logs/
+*.log
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+modules/__pycache__/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+
+# OS
+.DS_Store
+Thumbs.db

@@ -1,0 +1,35 @@
+# Stock_Noti_beta Configuration
+# Copy this file to config.yaml and fill in your values
+
+ai:
+  provider: "xai"  # Options: xai, openai, zhipu, deepseek
+  api_key: "YOUR_API_KEY_HERE"
+  model: "grok-4-latest"
+  base_url: "https://api.x.ai/v1"
+
+telegram:
+  bot_token: "YOUR_BOT_TOKEN_HERE"  # Get from @BotFather
+  chat_id: "YOUR_CHAT_ID_HERE"      # Get from api.telegram.org/bot<TOKEN>/getUpdates
+
+stocks:
+  - symbol: "NVDA"
+    name: "NVIDIA Corporation"
+    keywords: ["NVIDIA", "AI chip", "GPU"]
+  - symbol: "AAPL"
+    name: "Apple Inc"
+    keywords: ["Apple", "iPhone", "Mac"]
+
+alert_settings:
+  interval_minutes: 5        # How often to check for news
+  min_importance: 5          # Minimum score (0-10) to send alert
+  price_change_threshold: 3.0  # Price change % to trigger alert
+  news_timeframe_hours: 24   # Hours to look back for news
+
+schedule:
+  enabled: false
+  cron: "0 9-16 * * 1-5"     # Market hours (Mon-Fri)
+  timezone: "America/New_York"
+
+logging:
+  level: "INFO"
+  file: "logs/stock_noti.log"

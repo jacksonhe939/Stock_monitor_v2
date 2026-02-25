@@ -1,0 +1,16 @@
+# Core
+yfinance>=0.2.36
+pyyaml>=6.0.1
+python-dotenv>=1.0.0
+requests>=2.31.0
+
+# AI APIs
+openai>=1.12.0
+anthropic>=0.18.0
+
+# Scheduling
+apscheduler>=3.10.4
+
+# Utils
+rich>=13.7.0
+pydantic>=2.6.0
